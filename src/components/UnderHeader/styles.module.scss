@@ -1,0 +1,59 @@
+.container {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    z-index: 2;
+    position: relative;
+
+    width: 100%;
+    height: 25rem;
+
+    // background-color: red;
+
+    p {
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-variant: normal;
+        
+        color: var(--gray-800);
+
+        margin-top: 5px;
+
+        text-decoration: none;
+        
+    }
+
+    .Images {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        margin-left: 200px;
+        margin-bottom: 50px;
+
+        .Image {
+            width: fit-content;
+            height: fit-content;
+
+            margin-right: 250px;
+            
+            &:hover {
+                cursor: pointer;
+
+                transform: filter 0.2s;
+                opacity: 80
+                ;
+            }
+
+        }
+
+    }
+}

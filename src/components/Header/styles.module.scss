@@ -1,0 +1,163 @@
+.container {
+    width: 100%;
+    height: 23rem;
+
+    display: flex;
+    // align-items: center;
+
+    // background-color: red;
+}
+
+.topHeader {
+
+    display: flex;
+
+    height: 10rem;
+    // width: 100%;
+
+    position: absolute;
+    right: 0;
+
+    p {
+        font-size: large;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-variant: normal;
+        
+        color: white;
+
+        margin-top: 38px;
+        margin-right: 20px;
+
+    }
+
+    .links {
+        display: flex;
+
+        margin-top: 38px;
+        margin-right: 40px;
+
+        height: fit-content;
+
+        a {
+
+            text-decoration: none;
+
+            &.isLink:hover {
+                cursor: pointer;
+                text-decoration: underline;
+                color: blue;
+            }
+
+            color: white;
+
+            font-size: large;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-variant: normal;
+
+            margin-right: 40px;
+
+        }
+
+    }
+
+    .Image {
+        align-items: flex-start;
+
+        margin-top: 12px;
+        margin-right: 60px;
+
+        height: fit-content;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.ImageLogo {
+    align-items: flex-start;
+
+    height: fit-content;
+
+    margin-top: 12px;
+    margin-left: 350px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 3;
+    }
+
+}
+
+.center {
+    display: flex;
+
+    justify-content: center;
+    // justify-content: space-between;
+    align-items: center;
+
+    flex-direction: column;
+
+    margin-top: 90px;
+
+    // width: 100%;
+
+    .boxCenterTitle {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+
+        margin-left: 115px;
+        margin-bottom: 40px;
+
+        padding: 20px;
+
+        border-style: solid;
+        border-width: 3px;
+        border-color: white;
+
+
+        p {
+            font-size: 1.957rem;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-variant: normal;
+
+            color: white;
+        }
+
+    }
+
+    .content {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+
+        margin-left: 140px;
+
+        p {
+            // font-size: 0.5rem;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-variant: normal;
+
+            color: white;
+
+            margin-bottom: 8px;
+            
+        }
+    }
+
+}

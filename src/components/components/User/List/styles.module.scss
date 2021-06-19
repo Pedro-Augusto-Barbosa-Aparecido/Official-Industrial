@@ -1,0 +1,136 @@
+.containerTable {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    z-index: 2;
+    position: relative;
+
+    width: 100%;
+    height: fit-content;
+
+    text-align: center;
+
+    margin-bottom: 100px;
+    margin-top: 50px;
+
+}
+
+.title {
+    font-size: 2.23rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    
+    color: black;
+
+    text-decoration: none;
+
+    margin-bottom: 3.90rem;
+
+}
+
+.table {
+    font-size: 1.20rem;
+    text-align: center;
+    width: 60%;
+
+    .tableRowTitle {
+        background-color: rgba($color: #000000, $alpha: 1.0);
+
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+
+        height: 50px;
+
+        font-size: 1.50rem;
+        font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+        font-weight: bolder;
+        font-style: normal;
+
+        color: white;
+
+    }
+
+    .tableDataCell {
+        border-width: 3px;
+        border-color: #000000;
+
+        font-size: 1.20rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-style: italic;
+
+        text-align: center;
+
+        color: darkred;
+
+        background-color: lightgray;
+
+    }
+}
+
+.containerButton {
+    display: flex;
+
+    flex-direction: row;
+
+    width: fit-content;
+    height: fit-content;
+
+    margin-right: calc(60% - 200px);
+
+    justify-content: space-between;
+
+}
+
+.buttonExport { 
+    border-radius: 2px;
+    border-color: darkblue;
+    // border-width: 3px;
+
+    background-color: lightblue;
+
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    text-decoration: none;
+    text-align: center;
+
+    margin-right: 10px;
+
+    padding: 5px;
+
+}
+
+.buttonCreate { 
+    border-radius: 2px;
+    border-color: darkblue;
+    // border-width: 3px;
+
+    background-color: lightblue;
+
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    text-decoration: none;
+    text-align: center;
+
+    margin-right: 10px;
+
+    padding: 5px;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: solid;
+
+    }
+
+}
