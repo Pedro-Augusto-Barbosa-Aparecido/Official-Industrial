@@ -4,14 +4,12 @@ import styles from './styles.module.scss'
 import DownHeader from "../../../DownHeader";
 import Header from "../../../Header";
 
-import {
-    FaRegFileExcel,
-    GrUserNew
-} from 'react-icons/all'
-
-import {
-    useNavigate
-} from 'react-router-dom'
+import { FaRegFileExcel, FaRegEdit } from 'react-icons/fa';
+import { BiMessageSquareDetail, BiArrowBack } from 'react-icons/bi';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { GrUserNew } from "react-icons/gr";
+import { Button, Form } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 
 export default function ListUser() {
 
@@ -19,56 +17,48 @@ export default function ListUser() {
 
     const users = [
         {
+            "id": 0,
             "nome": "Pedro",
             "office": "Especialista",
-            "email": "pedro@gmail.com"
+            "email": "pedro@gmail.com",
+            "isAdmin": true
         },
         {
-            "nome": "Pedro",
+            "id": 1,
+            "nome": "Peter",
             "office": "Especialista",
-            "email": "pedro@gmail.com"
+            "email": "pedro@gmail.com",
+            "isAdmin": true
         },
         {
+            "id": 2,
             "nome": "Pedro",
             "office": "Especialista",
-            "email": "pedro@gmail.com"
+            "email": "pedro@gmail.com",
+            "isAdmin": false
         },
         {
+            "id": 3,
             "nome": "Pedro",
             "office": "Especialista",
-            "email": "pedro@gmail.com"
+            "email": "pedro@gmail.com",
+            "isAdmin": false
         },
         {
+            "id": 4,
             "nome": "Pedro",
             "office": "Especialista",
-            "email": "pedro@gmail.com"
+            "email": "pedro@gmail.com",
+            "isAdmin": true
         },
         {
+            "id": 5,
             "nome": "Pedro",
             "office": "Especialista",
-            "email": "pedro@gmail.com"
+            "email": "pedro@gmail.com",
+            "isAdmin": false
         },
-        {
-            "nome": "Pedro",
-            "office": "Especialista",
-            "email": "pedro@gmail.com"
-        },
-        {
-            "nome": "Pedro",
-            "office": "Especialista",
-            "email": "pedro@gmail.com"
-        },
-        {
-            "nome": "Pedro",
-            "office": "Especialista",
-            "email": "pedro@gmail.com"
-        },
-        {
-            "nome": "Pedro",
-            "office": "Especialista",
-            "email": "pedro@gmail.com"
-        },
-    ]
+    ];
 
     return (
         <>
@@ -77,16 +67,18 @@ export default function ListUser() {
                 <h1 className={styles.title} >Listagem de usuário</h1>
 
                 <div className={styles.containerButton}>
-                    <button className={styles.buttonExport}>
-                        Export
+                    <Button type="button" variant="info" className={styles.buttonBack} onClick={() => navigate('/')} >
+                        <BiArrowBack />
+                        Voltar
+                    </Button>
+                    <Button type="button" variant="info" className={styles.button} >
                         <FaRegFileExcel />
-                    </button>
-
-                    <button className={styles.buttonCreate} onClick={() => navigate('/users/create')}>
-                        Register
+                        Export to XLS
+                    </Button>
+                    <Button type="button" variant="success" className={styles.button} onClick={() => navigate('create')} >
                         <GrUserNew />
-                    </button>
-
+                        Create User
+                    </Button>
                 </div>
 
                 <table className={styles.table}>
@@ -94,6 +86,8 @@ export default function ListUser() {
                             <td>User</td>
                             <td>Office</td>
                             <td>Email</td>
+                            <td>Administrator</td>
+                            <td>Actions</td>
                         </tr>
                         {
                             users.map(user => {
@@ -102,6 +96,24 @@ export default function ListUser() {
                                         <td className={styles.tableDataCell}>{user.nome}</td>
                                         <td className={styles.tableDataCell}>{user.office}</td>
                                         <td className={styles.tableDataCell}>{user.email}</td>
+                                        <td className={styles.tableDataCell}>
+                                            <Form.Check 
+                                                disabled
+                                                type="checkbox"
+                                                defaultChecked={user.isAdmin}
+                                            />
+                                        </td>
+                                        <td className={styles.tableDataCell}>
+                                            <Button variant="secondary" className={styles.btnAction} onClick={() => navigate(`detail/${user.id}`)} name="Detail" >
+                                                <BiMessageSquareDetail size={15} />
+                                            </Button>
+                                            <Button variant="warning" className={styles.btnAction} href="#" name="Edit" >
+                                                <FaRegEdit size={15} />
+                                            </Button>
+                                            <Button variant="danger" className={styles.btnAction} href="#" name="Delete" >
+                                                <AiOutlineCloseCircle size={15} />
+                                            </Button>
+                                        </td>
                                     </tr>
                                 )
                             })

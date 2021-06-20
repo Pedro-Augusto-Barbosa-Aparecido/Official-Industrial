@@ -4,35 +4,17 @@ import styles from './styles.module.scss'
 
 import Header from "../../../Header";
 import DownHeader from "../../../DownHeader";
-import { 
-    DataUserForm 
-} from "../../../../types/typesForms";
 
-import { 
-    Button
-} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import { GrUserNew } from 'react-icons/gr';
-import { IoMdArrowRoundBack } from 'react-icons/io'
-
+import { IoMdArrowRoundBack } from 'react-icons/io';
 import { Form } from '@unform/web';
+
 import InputText from '../components/Forms/inputText';
 
-import { useNavigate } from "react-router-dom";
-
 export default function CreateUser() {
-
-    const navigate = useNavigate();
     const formReference = useRef(null);
-
-    const data : DataUserForm = {
-        "email": "",
-        "username": "",
-        "password": "",
-        "office": "",
-        "isAdmin": false,
-        "passwordConfirmation": ""
-    };
 
     const handleSubmit = (data: any) => {
         console.log(data)

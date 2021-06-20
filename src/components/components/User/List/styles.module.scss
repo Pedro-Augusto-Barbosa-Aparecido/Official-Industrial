@@ -56,7 +56,7 @@
     }
 
     .tableDataCell {
-        border-width: 3px;
+        border-width: 9px;
         border-color: #000000;
 
         font-size: 1.20rem;
@@ -77,60 +77,39 @@
     display: flex;
 
     flex-direction: row;
+    width: 100%;
 
-    width: fit-content;
-    height: fit-content;
+    // margin-right: calc(60% - 200px);
 
-    margin-right: calc(60% - 200px);
+    // justify-content: center;
 
-    justify-content: space-between;
-
-}
-
-.buttonExport { 
-    border-radius: 2px;
-    border-color: darkblue;
-    // border-width: 3px;
-
-    background-color: lightblue;
-
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-
-    text-decoration: none;
-    text-align: center;
-
-    margin-right: 10px;
-
-    padding: 5px;
+    margin-bottom: 8px;
 
 }
 
-.buttonCreate { 
-    border-radius: 2px;
-    border-color: darkblue;
-    // border-width: 3px;
+.buttonBack { 
+    border-radius: 0;
 
-    background-color: lightblue;
+    padding: .3rem;
 
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-style: normal;
+    margin-bottom: 5px;
 
-    text-decoration: none;
-    text-align: center;
+    margin-left: 20%;
 
-    margin-right: 10px;
+}
 
-    padding: 5px;
+.button { 
+    border-radius: 0;
 
-    &:hover {
-        cursor: pointer;
-        text-decoration: solid;
+    padding: .3rem;
 
-    }
+    margin-bottom: 5px;
 
+    margin-left: .5%;
+
+}
+
+.btnAction {
+    margin: 5px;
+    margin-left: 15px;
 }
