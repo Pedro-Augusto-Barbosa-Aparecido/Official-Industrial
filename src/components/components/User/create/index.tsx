@@ -11,7 +11,7 @@ import { GrUserNew } from 'react-icons/gr';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { Form } from '@unform/web';
 
-import InputText from '../components/Forms/inputText';
+import InputText from '../components/input/inputText';
 
 export default function CreateUser() {
     const formReference = useRef(null);

@@ -82,42 +82,46 @@ export default function ListUser() {
                 </div>
 
                 <table className={styles.table}>
-                        <tr className={styles.tableRowTitle}>
-                            <td>User</td>
-                            <td>Office</td>
-                            <td>Email</td>
-                            <td>Administrator</td>
-                            <td>Actions</td>
-                        </tr>
-                        {
-                            users.map(user => {
-                                return (
-                                    <tr>
-                                        <td className={styles.tableDataCell}>{user.nome}</td>
-                                        <td className={styles.tableDataCell}>{user.office}</td>
-                                        <td className={styles.tableDataCell}>{user.email}</td>
-                                        <td className={styles.tableDataCell}>
-                                            <Form.Check 
-                                                disabled
-                                                type="checkbox"
-                                                defaultChecked={user.isAdmin}
-                                            />
-                                        </td>
-                                        <td className={styles.tableDataCell}>
-                                            <Button variant="secondary" className={styles.btnAction} onClick={() => navigate(`detail/${user.id}`)} name="Detail" >
-                                                <BiMessageSquareDetail size={15} />
-                                            </Button>
-                                            <Button variant="warning" className={styles.btnAction} href="#" name="Edit" >
-                                                <FaRegEdit size={15} />
-                                            </Button>
-                                            <Button variant="danger" className={styles.btnAction} href="#" name="Delete" >
-                                                <AiOutlineCloseCircle size={15} />
-                                            </Button>
-                                        </td>
-                                    </tr>
-                                )
-                            })
-                        }
+                        <thead>
+                            <tr className={styles.tableRowTitle}>
+                                <td>User</td>
+                                <td>Office</td>
+                                <td>Email</td>
+                                <td>Administrator</td>
+                                <td>Actions</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                users.map(user => {
+                                    return (
+                                        <tr>
+                                            <td className={styles.tableDataCell}>{user.nome}</td>
+                                            <td className={styles.tableDataCell}>{user.office}</td>
+                                            <td className={styles.tableDataCell}>{user.email}</td>
+                                            <td className={styles.tableDataCell}>
+                                                <Form.Check 
+                                                    disabled
+                                                    type="checkbox"
+                                                    defaultChecked={user.isAdmin}
+                                                />
+                                            </td>
+                                            <td className={styles.tableDataCell}>
+                                                <Button variant="secondary" className={styles.btnAction} onClick={() => navigate(`detail/${user.id}`)} name="Detail" >
+                                                    <BiMessageSquareDetail size={15} />
+                                                </Button>
+                                                <Button variant="warning" className={styles.btnAction} onClick={() => navigate(`edit/${user.id}`)} name="Edit" >
+                                                    <FaRegEdit size={15} />
+                                                </Button>
+                                                <Button variant="danger" className={styles.btnAction} href="#" name="Delete" >
+                                                    <AiOutlineCloseCircle size={15} />
+                                                </Button>
+                                            </td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
                 </table>
             </div>
             <DownHeader />
