@@ -10,6 +10,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { GrUserNew } from "react-icons/gr";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
+import { DeleteEntent } from "../../../../utils/deleteFunctions";
 
 export default function ListUser() {
 
@@ -113,7 +114,7 @@ export default function ListUser() {
                                                 <Button variant="warning" className={styles.btnAction} onClick={() => navigate(`edit/${user.id}`)} name="Edit" >
                                                     <FaRegEdit size={15} />
                                                 </Button>
-                                                <Button variant="danger" className={styles.btnAction} href="#" name="Delete" >
+                                                <Button variant="danger" className={styles.btnAction} onClick={() => DeleteEntent(user.nome)} name="Delete" >
                                                     <AiOutlineCloseCircle size={15} />
                                                 </Button>
                                             </td>

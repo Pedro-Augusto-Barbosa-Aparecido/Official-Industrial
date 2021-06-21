@@ -12,6 +12,8 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { FaRegEdit } from 'react-icons/fa';
 import { useNavigate } from "react-router";
 
+import { DeleteEntent } from '../../../../utils/deleteFunctions';
+
 export default function DetailUser () {
 
     const { pk } = useParams();
@@ -86,7 +88,7 @@ export default function DetailUser () {
                         <BiArrowBack />
                         Voltar
                     </Button>
-                    <Button variant="danger" className={styles.button} >
+                    <Button variant="danger" className={styles.button} onClick={() => DeleteEntent(user.nome)} >
                         <AiOutlineCloseCircle />
                         Delete
                     </Button>  

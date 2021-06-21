@@ -11,6 +11,8 @@ import { Form } from '@unform/web';
 import { Button } from 'react-bootstrap';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { FiSave } from 'react-icons/fi';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { DeleteEntent } from '../../../../utils/deleteFunctions';
 
 export default function EditUser () {
 
@@ -137,6 +139,9 @@ export default function EditUser () {
                     <Button type="submit" variant="success" className={styles.submit} >
                         <FiSave />
                         Save
+                    </Button>
+                    <Button type="button" variant="danger" className={styles.delete} onClick={() => DeleteEntent(users[parseInt(pk)].username)} >
+                        <AiOutlineCloseCircle />
                     </Button>
                 </Form>
             </div>
